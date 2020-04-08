@@ -13,4 +13,4 @@ ASSET_DIRECTORY_NAME = 'assets'
 #Audio assets
 INCRAMENT_SCORE_SOUND = 'incramentScore.wav'
 DECREMENT_SCORE_SOUND = INCRAMENT_SCORE_SOUND
-RESET_SCORE_SOUND = 'resetScore'
+RESET_SCORE_SOUND = 'resetScore.wav'
