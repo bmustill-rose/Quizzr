@@ -3,7 +3,8 @@ from pygame.locals import (
  K_UP,
  K_DOWN,
  K_r,
- K_m
+ K_m,
+ K_q
 )
 
 import config
@@ -28,6 +29,7 @@ while active:
    elif event.key == K_DOWN: score = scoreHandlers.decrementScore(pygame, config, DECREMENT_SCORE, score)
    elif event.key == K_r: score = scoreHandlers.resetScore(pygame, config, RESET_SCORE)
    elif event.key == K_m: musicHandlers.toggleMusic(pygame)
+   elif event.key == K_q: active = False
  pygame.display.flip()
  clock.tick(40)
 
