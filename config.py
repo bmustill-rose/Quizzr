@@ -1,3 +1,8 @@
 #Screen dimensions
 WIDTH = 1920
 HEIGHT = 1080
+
+#Scoring
+MINIMUM_SCORE = 0
+MAXIMUM_SCORE = 100
+STARTING_SCORE = 0
