@@ -20,10 +20,10 @@ while active:
  for event in pygame.event.get():
   if event.type == pygame.QUIT: active = False
   if event.type == pygame.KEYUP:
-   if event.key == K_UP: score = scoreHandlers.incramentScore(config, score)
-   elif event.key == K_DOWN: score = scoreHandlers.decrementScore(config, score)
-   elif event.key == K_r: score = scoreHandlers.resetScore(config)
-   elif event.key == K_m: musicHandlers.toggleMusic()
+   if event.key == K_UP: score = scoreHandlers.incramentScore(pygame, config, score)
+   elif event.key == K_DOWN: score = scoreHandlers.decrementScore(pygame, config, score)
+   elif event.key == K_r: score = scoreHandlers.resetScore(pygame, config)
+   elif event.key == K_m: musicHandlers.toggleMusic(pygame)
  pygame.display.flip()
  clock.tick(40)
 
