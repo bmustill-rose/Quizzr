@@ -1,16 +1,24 @@
 #Screen dimensions
-WIDTH = 1920
-HEIGHT = 1080
+DIMENSIONS = {
+ "WIDTH": 1920,
+ "HEIGHT": 1080
+}
 
 #Scoring
-MINIMUM_SCORE = 0
-MAXIMUM_SCORE = 100
-STARTING_SCORE = 0
+SCORING = {
+ "MINIMUM_SCORE": 0,
+ "MAXIMUM_SCORE": 100,
+ "STARTING_SCORE": 0
+}
 
 #Assets
-ASSET_DIRECTORY_NAME = 'assets'
+ASSETS = {
+ "ASSET_DIRECTORY_NAME": "assets"
+}
 
 #Audio assets
-INCRAMENT_SCORE_SOUND = 'incramentScore.wav'
-DECREMENT_SCORE_SOUND = INCRAMENT_SCORE_SOUND
-RESET_SCORE_SOUND = 'resetScore.wav'
+AUDIO_ASSETS = {
+ "INCRAMENT_SCORE_SOUND": "incramentScore.wav",
+ "DECREMENT_SCORE_SOUND": "incramentScore.wav",
+ "RESET_SCORE_SOUND": "resetScore.wav"
+}

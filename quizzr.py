@@ -10,14 +10,11 @@ from pygame.locals import (
 import config
 from handlers import scoreHandlers, musicHandlers
 
-score = config.STARTING_SCORE
+score = config.SCORING['STARTING_SCORE']
 clock = pygame.time.Clock()
 pygame.mixer.init()
-INCRAMENT_SCORE = pygame.mixer.Sound(config.ASSET_DIRECTORY_NAME+"/"+config.INCRAMENT_SCORE_SOUND)
-DECREMENT_SCORE = pygame.mixer.Sound(config.ASSET_DIRECTORY_NAME+"/"+config.DECREMENT_SCORE_SOUND)
-RESET_SCORE = pygame.mixer.Sound(config.ASSET_DIRECTORY_NAME+"/"+config.RESET_SCORE_SOUND)
 pygame.display.init()
-screen = pygame.display.set_mode((config.WIDTH, config.HEIGHT))
+screen = pygame.display.set_mode((config.DIMENSIONS['WIDTH'], config.DIMENSIONS['HEIGHT']))
 pygame.display.set_caption("{} points Quizzr".format(score))
 
 active = True
