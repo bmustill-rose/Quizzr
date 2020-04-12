@@ -9,10 +9,12 @@ from pygame.locals import (
 
 import config
 from handlers import scoreHandlers, musicHandlers
+from factories import soundsFactory
 
 score = config.SCORING['STARTING_SCORE']
 clock = pygame.time.Clock()
 pygame.mixer.init()
+sounds = soundsFactory.createSounds(pygame.mixer, config.AUDIO_ASSETS)
 pygame.display.init()
 screen = pygame.display.set_mode((config.DIMENSIONS['WIDTH'], config.DIMENSIONS['HEIGHT']))
 pygame.display.set_caption("{} points Quizzr".format(score))
