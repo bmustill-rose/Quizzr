@@ -1,8 +1,10 @@
-def createSounds(mixer, dictOfSounds):
+def createSounds(mixer, directory, dictOfSounds):
  sounds = {}
  for sound in dictOfSounds:
-  if _fileExists(dictOfSounds[sound]):
-   sounds[sound] = _createSound(mixer, dictOfSounds[sound])
+  if _fileExists(directory+"/"+dictOfSounds[sound]):
+   sounds[sound] = _createSound(mixer, directory+"/"+dictOfSounds[sound])
+  else:
+   sounds[sound] = None
  return sounds
 
 def _fileExists(fName):
