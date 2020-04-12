@@ -14,7 +14,10 @@ def _shouldScoreBeChanged(scoring, score):
   return False
 
 def _acknowledgeChangedScore(pygame, sound, score):
- pygame.mixer.Sound.play(sound)
+ try:
+  pygame.mixer.Sound.play(sound)
+ except:
+  pass
  pygame.display.set_caption("{} points Quizzr".format(score))
 
 def _changeScore(pygame, SCORING, sound, score, newScore):
