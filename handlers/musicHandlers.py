@@ -1,8 +1,8 @@
-def toggleMusic(music, dirName, fName):
+def toggleMusic(music, dirName, fName, volume):
  if _isMusicPlaying(music):
   _stopMusic(music)
  else:
-  _startMusic(music, dirName+"/"+fName)
+  _startMusic(music, dirName+"/"+fName, volume)
 
 def _fileExists(fName):
  from os import path
@@ -14,10 +14,11 @@ def _fileExists(fName):
 def _stopMusic(music):
  music.stop()
 
-def _startMusic(music, fName):
+def _startMusic(music, fName, volume):
  if _fileExists(fName):
   try:
    music.load(fName)
+   music.set_volume(volume)
    music.play()
   except:
    pass

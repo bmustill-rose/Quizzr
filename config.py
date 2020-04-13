@@ -23,3 +23,8 @@ AUDIO_ASSETS = {
  "RESET_SCORE_SOUND": "resetScore.wav",
  "MUSIC": "backgroundMusic.wav"
 }
+
+#Audio configuration
+AUDIO_CONFIGURATION = {
+ "VOLUME": 0.3
+}
