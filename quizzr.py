@@ -27,7 +27,7 @@ while active:
    if event.key == K_UP: score = scoreHandlers.incramentScore(pygame, config.SCORING, sounds['INCRAMENT_SCORE_SOUND'], score)
    elif event.key == K_DOWN: score = scoreHandlers.decrementScore(pygame, config.SCORING, sounds['DECREMENT_SCORE_SOUND'], score)
    elif event.key == K_r: score = scoreHandlers.resetScore(pygame, config.SCORING, sounds['RESET_SCORE_SOUND'])
-   elif event.key == K_m: musicHandlers.toggleMusic(pygame)
+   elif event.key == K_m: musicHandlers.toggleMusic(pygame.mixer.music, config.ASSETS['ASSET_DIRECTORY_NAME'], config.AUDIO_ASSETS['MUSIC'])
    elif event.key == K_q: active = False
  pygame.display.flip()
  clock.tick(40)
