@@ -20,5 +20,6 @@ ASSETS = {
 AUDIO_ASSETS = {
  "INCRAMENT_SCORE_SOUND": "incramentScore.wav",
  "DECREMENT_SCORE_SOUND": "incramentScore.wav",
- "RESET_SCORE_SOUND": "resetScore.wav"
+ "RESET_SCORE_SOUND": "resetScore.wav",
+ "MUSIC": "backgroundMusic.wav"
 }

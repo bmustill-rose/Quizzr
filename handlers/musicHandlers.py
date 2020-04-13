@@ -1,2 +1,1 @@
-def toggleMusic():
- print('toggleMusic')
+def toggleMusic(mixer, dirName, fName):
