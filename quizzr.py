@@ -11,16 +11,18 @@ import config
 from handlers import scoreHandlers, musicHandlers
 from factories import soundsFactory
 
-score = config.SCORING['STARTING_SCORE']
-clock = pygame.time.Clock()
-pygame.mixer.init()
-sounds = soundsFactory.createSounds(pygame.mixer, config.ASSETS['ASSET_DIRECTORY_NAME'], config.AUDIO_ASSETS)
 pygame.display.init()
-screen = pygame.display.set_mode((config.DIMENSIONS['WIDTH'], config.DIMENSIONS['HEIGHT']))
-screen.fill(pygame.color.THECOLORS['deepskyblue'])
-pygame.display.set_caption("{} points Quizzr".format(score))
 pygame.font.init()
+pygame.mixer.init()
+
+clock = pygame.time.Clock()
+screen = pygame.display.set_mode((config.DIMENSIONS['WIDTH'], config.DIMENSIONS['HEIGHT']))
+sounds = soundsFactory.createSounds(pygame.mixer, config.ASSETS['ASSET_DIRECTORY_NAME'], config.AUDIO_ASSETS)
 font = pygame.font.Font(None, 260)
+
+screen.fill(pygame.color.THECOLORS['deepskyblue'])
+score = config.SCORING['STARTING_SCORE']
+pygame.display.set_caption("{} points Quizzr".format(score))
 
 active = True
 while active:
