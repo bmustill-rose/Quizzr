@@ -18,7 +18,7 @@ pygame.mixer.init()
 clock = pygame.time.Clock()
 screen = pygame.display.set_mode((config.DIMENSIONS['WIDTH'], config.DIMENSIONS['HEIGHT']))
 sounds = soundsFactory.createSounds(pygame.mixer, config.ASSETS['ASSET_DIRECTORY_NAME'], config.AUDIO_ASSETS)
-font = pygame.font.Font(None, 260)
+font = pygame.font.Font(None, config.DIMENSIONS['HEIGHT']//4)
 
 screen.fill(pygame.color.THECOLORS['deepskyblue'])
 score = config.SCORING['STARTING_SCORE']
