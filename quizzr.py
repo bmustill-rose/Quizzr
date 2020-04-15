@@ -17,7 +17,10 @@ pygame.mixer.init()
 sounds = soundsFactory.createSounds(pygame.mixer, config.ASSETS['ASSET_DIRECTORY_NAME'], config.AUDIO_ASSETS)
 pygame.display.init()
 screen = pygame.display.set_mode((config.DIMENSIONS['WIDTH'], config.DIMENSIONS['HEIGHT']))
+screen.fill(pygame.color.THECOLORS['deepskyblue'])
 pygame.display.set_caption("{} points Quizzr".format(score))
+pygame.font.init()
+font = pygame.font.Font(None, 260)
 
 active = True
 while active:
@@ -29,6 +32,8 @@ while active:
    elif event.key == K_r: score = scoreHandlers.resetScore(pygame, config.SCORING, sounds['RESET_SCORE_SOUND'])
    elif event.key == K_m: musicHandlers.toggleMusic(pygame.mixer.music, config.ASSETS['ASSET_DIRECTORY_NAME'], config.AUDIO_ASSETS['MUSIC'], config.AUDIO_CONFIGURATION['VOLUME'])
    elif event.key == K_q: active = False
+ text = font.render(str(score), True, pygame.color.THECOLORS['yellow'])
+ screen.blit(text, (860 - text.get_width() // 2, 520 - text.get_height() // 2))
  pygame.display.flip()
  clock.tick(40)
 
