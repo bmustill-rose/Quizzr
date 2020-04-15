@@ -1,9 +1,3 @@
-#Screen dimensions
-DIMENSIONS = {
- "WIDTH": 1920,
- "HEIGHT": 1080
-}
-
 #Scoring
 SCORING = {
  "MINIMUM_SCORE": 0,

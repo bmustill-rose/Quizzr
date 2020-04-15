@@ -16,7 +16,9 @@ pygame.font.init()
 pygame.mixer.init()
 
 clock = pygame.time.Clock()
-screen = pygame.display.set_mode((config.DIMENSIONS['WIDTH'], config.DIMENSIONS['HEIGHT']))
+screen = pygame.display.set_mode((0,0), flags=pygame.FULLSCREEN)
+DISPLAY_INFO = pygame.display.Info()
+print(DISPLAY_INFO)
 sounds = soundsFactory.createSounds(pygame.mixer, config.ASSETS['ASSET_DIRECTORY_NAME'], config.AUDIO_ASSETS)
 font = pygame.font.Font(None, config.DIMENSIONS['HEIGHT']//4)
 
@@ -35,7 +37,7 @@ while active:
    elif event.key == K_m: musicHandlers.toggleMusic(pygame.mixer.music, config.ASSETS['ASSET_DIRECTORY_NAME'], config.AUDIO_ASSETS['MUSIC'], config.AUDIO_CONFIGURATION['VOLUME'])
    elif event.key == K_q: active = False
  text = font.render(str(score), True, pygame.color.THECOLORS['yellow'])
- screen.blit(text, (config.DIMENSIONS['WIDTH'] - text.get_width() // 2, config.DIMENSIONS['HEIGHT'] - text.get_height() // 2))
+ screen.blit(text, (DISPLAY_INFO.current_w - text.get_width() // 2, DISPLAY_INFO.current_h - text.get_height() // 2))
  pygame.display.flip()
  clock.tick(40)
 
