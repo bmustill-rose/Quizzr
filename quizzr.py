@@ -35,7 +35,7 @@ while active:
    elif event.key == K_m: musicHandlers.toggleMusic(pygame.mixer.music, config.ASSETS['ASSET_DIRECTORY_NAME'], config.AUDIO_ASSETS['MUSIC'], config.AUDIO_CONFIGURATION['VOLUME'])
    elif event.key == K_q: active = False
  text = font.render(str(score), True, pygame.color.THECOLORS['yellow'])
- screen.blit(text, (860 - text.get_width() // 2, 520 - text.get_height() // 2))
+ screen.blit(text, (config.DIMENSIONS['WIDTH'] - text.get_width() // 2, config.DIMENSIONS['HEIGHT'] - text.get_height() // 2))
  pygame.display.flip()
  clock.tick(40)
 
